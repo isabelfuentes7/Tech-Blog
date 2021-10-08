@@ -1,0 +1,27 @@
+    
+    <div class="container"  style="margin-top: 25px;">
+    <div class="row" >
+        <div class="col" >
+            <h2  >Dashboard: Your posts</h2>
+        </div>
+        <div class="col text-right">
+            <a href="/dashboard/create/"><button id="create-post" class="button mr-auto">Create Post</button></a>
+        </div>
+        
+    </div>
+<hr>
+{{#if posts.length}}
+    {{#each posts as |post|}}
+        <div class="container">
+        {{> post-info post}}
+        
+            <a href="/dashboard/edit/{{post.id}}"><button class="button btn-primary" style="border-radius: 10px;">Edit Post</button></a>
+        </div>
+    {{/each}}
+</div>
+{{else}}
+<h6 class="pb-4 has-text-centered is-italic">Currently, You don't have any posts.</h6>
+
+{{/if}}
+
+</div>

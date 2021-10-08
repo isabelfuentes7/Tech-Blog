@@ -1,0 +1,14 @@
+<div class="card" style="background-color: white;padding:10px">
+<div class="comments"  style="background-color: white;">
+  {{#each this}}
+  <div class="comment"  style="background-color: white;">
+    <div class="meta"  style="background-color: white;">
+      {{user.username}} on {{format_date created_at}}
+    </div>
+    <div class="meta"  style="background-color: white;" >
+      {{comment_text}}
+    </div>
+  </div>
+  {{/each}}
+</div>
+</div>
